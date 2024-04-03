@@ -86,8 +86,8 @@ void handleGet() {
   readGY80(binary_gy);
 
   // 将浮点数转换为二进制数组
-  int binary_data_length = sizeof(float) * sizeof(binary_gy); // sizeof(float);
-
+  int binary_data_length = sizeof(binary_gy);
+  Serial.println(binary_data_length);
   // 在这里你可以对二进制数据进行处理，比如解析和使用
   // float binary_data[2];
   // binary_data[0] = t1;
