@@ -49,7 +49,7 @@ void readGY80(float* gy_f) {
 
 void setup() {
   Wire.begin(4, 5); // 将SDA连接到GPIO4, SCL连接到GPIO5
-  Serial.begin(115200);
+  Serial.begin(9600);
   initGY80();
 
   // 连接到WiFi
@@ -86,7 +86,7 @@ void handleGet() {
   readGY80(binary_gy);
 
   // 将浮点数转换为二进制数组
-  int binary_data_length = sizeof(float) * sizeof(binary_gy) / sizeof(float);
+  int binary_data_length = sizeof(float) * sizeof(binary_gy); // sizeof(float);
 
   // 在这里你可以对二进制数据进行处理，比如解析和使用
   // float binary_data[2];

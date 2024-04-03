@@ -2,10 +2,10 @@ import requests
 import struct
 
 # ESP-01 的 IP 地址和端口号
-esp01_ip = "192.168.1.14"
+esp01_ip = "192.168.1.18"
 port = 6447
 
-for i in range(1, 1000):
+for i in range(1, 10):
     print(i)
     # 发起 GET 请求到 ESP-01
     url = f"http://{esp01_ip}:{port}/req"
